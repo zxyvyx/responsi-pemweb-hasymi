@@ -6,3 +6,6 @@ Teknologi yang digunakan:
 
  1. Bootstrap 4.6
  2. jQuery 3.6.0
+
+Tampilan news section:
+![Tampilan saat berhasil dibuka](https://raw.githubusercontent.com/zxyvyx/responsi-pemweb-hasymi/master/img/2021-07-14%20(18).png)
