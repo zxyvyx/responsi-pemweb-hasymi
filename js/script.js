@@ -1,11 +1,18 @@
 $(document).ready(function () {
+    $('.nav-item').click(function () {
+        $('.nav-item').removeClass('active');
+        $(this).addClass('active');
+    });
+
     api = 'https://indonesia-covid-19.mathdro.id/api/provinsi/'
     $.ajax({
         url: api,
         success: function (res) {
-            $('#meninggal').html(res.data[7].kasusMeni);
-            $('#positif').html(res.data[7].kasusPosi);
-            $('#negatif').html(res.data[7].kasusSemb);
+            var provIndex = Math.floor(Math.random() * 34) + 0;
+            $('#provinsi').html(res.data[provIndex].provinsi);
+            $('#meninggal').html(res.data[provIndex].kasusMeni);
+            $('#positif').html(res.data[provIndex].kasusPosi);
+            $('#negatif').html(res.data[provIndex].kasusSemb);
         },
     })
 
@@ -13,7 +20,7 @@ $(document).ready(function () {
     $.ajax({
         url: api,
         success: function (rest) {
-            for(let i = 1; i <= 4; i++) {
+            for (let i = 1; i <= 4; i++) {
                 var newsIndex = Math.floor(Math.random() * 20) + 0;
                 $('.card:nth-child(' + i + ') a').attr('href', rest.articles[newsIndex].url)
                 $('.card:nth-child(' + i + ') .news-title').html(rest.articles[newsIndex].title);
@@ -27,11 +34,12 @@ $(document).ready(function () {
 })
 
 const navHeight = $('nav').outerHeight();
-const content2Height = $('#content2').position();
-const content3Height = $('#content3').position();
 
 $(window).scroll(function () {
     var height = $(window).scrollTop();
+    var scrollPosition = $(document).scrollTop().valueOf();
+
+    console.log(scrollPosition)
 
     if (height > navHeight * 2) {
         $('nav').addClass('on-page-scroll');
