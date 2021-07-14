@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* html {
+    scroll-behavior: smooth;
+} */
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    /* color pallete */
+    --primary: #F1ECC3;
+    --secondary: #C9D8B6;
+    --third: #57837B;
+    --fourth: #515E63;
+}
+
+nav {
+    transition: background .125s ease-in-out;
+}
+
+nav .nav-item a {
+    font-weight: 300;
+    color: var(--primary);
+}
+
+nav .nav-item.active a {
+    font-weight: 600;
+}
+
+nav.on-page-scroll {
+    background-color: var(--primary);
+}
+
+nav.on-page-scroll .nav-item a {
+    color: var(--third);
+}
+
+nav .brand {
+    width: 50px;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 0.5)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+header .carousel-item {
+    max-height: 75vh;
+}
+
+header .carousel-item .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--third);
+    background: linear-gradient(var(--third), var(--secondary));
+    background-size: cover;
+    opacity: 0.675;
+    z-index: 3;
+}
+
+header .carousel-item img {
+    position: relative;
+    z-index: 2;
+}
+
+header .carousel-control-next,
+header .carousel-control-prev {
+    z-index: 4;
+}
+
+ol.carousel-indicators li {
+    position: relative;
+}
+
+.carousel-indicators li {
+    background-color: var(--third);
+}
+
+.overlapping-content-card .info {
+    background: var(--third);
+    height: fit-content;
+}
+
+.overlapping-content-card .info .info-value {
+    color: var(--primary);
+    font-size: 3.5em;
+}
+
+/* Section */
+section#content2 {
+    background: var(--secondary);
+}
+
+section#content2 .card {
+    width: calc(48.55%);
+    transition: transform .125s ease-in-out, box-shadow .5s ease-in-out;
+}
+
+section#content2 .card:hover {
+    transform: scale(1.0125);
+    box-shadow: 0px 0px 25px 0px rgba(100, 100, 100, 0.25);
+    -webkit-box-shadow: 0px 0px 25px 0px rgba(100, 100, 100, 0.25);
+    -moz-box-shadow: 0px 0px 25px 0px rgba(100, 100, 100, 0.25);
+}
+
+section#content2 .card a {
+    text-decoration: none;
+    color: var(--fourth);
+}
+
+section#content2 .card .content .news-content {
+    color: var(--third);
+    font-weight: normal;
+}
+
+section#content2 .card .content .news-author {
+    font-weight: 600;
+    font-style: italic;
+}
+
+section#content2 .card .content .news-source {
+    font-weight: bolder;
+}
+
+section#content3 .responsi-comment {
+    background: var(--third);
+    color: var(--secondary);
+}
+
+footer {
+    background: var(--fourth);
+    color: var(--primary);
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--secondary);
+}
+
+footer a:hover {
+    color: var(--primary);
+}
+
+@media only screen and (max-width: 1199px) {
+    section#content2 .card {
+        width: calc(100%);
+    }
+}
