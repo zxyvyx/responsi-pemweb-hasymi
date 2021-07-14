@@ -157,3 +157,43 @@ footer a:hover {
         width: calc(100%);
     }
 }
+
+@media only screen and (max-width: 991px) {
+    header {
+        height: 75vh;
+    }
+
+    .carousel {
+        height: 75vh;
+    }
+
+    .carousel-item {
+        height: 75vh;
+    }
+
+    .carousel-item img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    header {
+        height: 100vh;
+    }
+
+    .carousel {
+        height: 100vh;
+    }
+
+    .carousel-item {
+        min-height: 100vh;
+    }
+
+    .carousel-item img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+    }
+}
