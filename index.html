@@ -27,14 +27,14 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#content1">Apa itu COVID-19? <span
-                                class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="#">Apa itu COVID-19? <span
+                                class="sr-only" data-scroll="content1">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#content2">Berita Terkini</a>
+                        <a class="nav-link" href="#" data-scroll="content2">Berita Terkini</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#content3">Pola Hidup Sehat</a>
+                        <a class="nav-link" href="#" data-scroll="content3">Pola Hidup Sehat</a>
                     </li>
                 </ul>
             </div>
@@ -107,7 +107,7 @@
         </div>
     </header>
 
-    <section id="content1">
+    <section id="content1" data-anchor='content1'>
         <div class="container">
             <div class="mt-5">
                 <div class="overlapping-content-card">
@@ -162,7 +162,7 @@
         </div>
     </section>
 
-    <section id="content2" class="py-5">
+    <section id="content2" class="py-5" data-anchor="content2">
         <div class="container">
             <h1 class="class text-center pb-2">Berita Terkini</h1>
             <div class="card-news d-flex flex-wrap">
@@ -214,7 +214,7 @@
         </div>
     </section>
 
-    <section id="content3">
+    <section id="content3" data-anchor="content3">
         <div class="container">
             <div class="article-content p-5 w-100 h-100 d-flex justify-content-center">
                 <div class="row">
@@ -237,10 +237,18 @@
             </div>
         </div>
         <div class="responsi-comment text-center p-5">
-            <h3>Responsi Pemrograman Web</h3>
-            <p>
-                Laman ini memuat informasi seputar kasus COVID-19 dan beberapa berita umum yang hangat di masyarakat.
-            </p>
+            <div class="container">
+                <h2 class="mb-5">Responsi Pemrograman Web</h2>
+                <p>
+                    Laman ini memuat informasi seputar kasus COVID-19 dan beberapa berita umum yang hangat di
+                    masyarakat.
+                </p>
+                <p>
+                    Laman ini masih belum mampu menampilkan API untuk berita jika ditampilkan di hosting karena
+                    menggunakan
+                    API versi gratis sehingga memiliki keterbatasan dalam tampilan sudah dihosting.
+                </p>
+            </div>
         </div>
     </section>
 
@@ -259,7 +267,8 @@
                     <div class="col-lg-4">
                         <h4>Informasi</h4>
                         <p>
-                            Laman Web ini merupakan tugas responsi Pemrograman Web yang dikhususkan bukan untuk sumber ilmiah.
+                            Laman Web ini merupakan tugas responsi Pemrograman Web yang dikhususkan bukan untuk sumber
+                            ilmiah.
                         </p>
                     </div>
                     <div class="col-lg-4">
@@ -302,6 +311,7 @@
         integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
     </script>
     <script src="js/script.js"></script>
+    <script src="js/scroll.js"></script>
 </body>
 
 </html>

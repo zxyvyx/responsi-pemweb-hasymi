@@ -37,9 +37,7 @@ const navHeight = $('nav').outerHeight();
 
 $(window).scroll(function () {
     var height = $(window).scrollTop();
-    var scrollPosition = $(document).scrollTop().valueOf();
-
-    console.log(scrollPosition)
+    // var scrollPosition = $(document).scrollTop().valueOf();
 
     if (height > navHeight * 2) {
         $('nav').addClass('on-page-scroll');
