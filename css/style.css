@@ -211,4 +211,11 @@ footer a:hover {
         height: 100%;
         width: 100%;
     }
+
+    .overlapping-content-card .kasus-title,
+    .news-top-title,
+    .apa-itu,
+    .responsi-comment .responsi-title {
+        font-size: 1.25rem;
+    }
 }
