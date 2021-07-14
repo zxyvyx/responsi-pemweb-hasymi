@@ -8,18 +8,20 @@ $(document).ready(function () {
             $('#negatif').html(res.data[7].kasusSemb);
         },
     })
-    
+
     api = 'https://newsapi.org/v2/top-headlines?country=id&apiKey=58558e5990f44fd6b3d3c00077aff726'
     $.ajax({
         url: api,
         success: function (rest) {
-            // var gambar = res.articles[0].urlToImage;
-            $('.card a').attr('href', rest.articles[4].url)
-            $('.card .news-title').html(rest.articles[4].title);
-            $('.card .news-content').html(rest.articles[4].description);
-            $('.card img').attr('src', rest.articles[4].urlToImage);
-            $('.card .news-author').html(rest.articles[4].author);
-            $('.card .news-source').html(rest.articles[4].source.name);
+            for(let i = 1; i <= 4; i++) {
+                var newsIndex = Math.floor(Math.random() * 20) + 0;
+                $('.card:nth-child(' + i + ') a').attr('href', rest.articles[newsIndex].url)
+                $('.card:nth-child(' + i + ') .news-title').html(rest.articles[newsIndex].title);
+                $('.card:nth-child(' + i + ') .news-content').html(rest.articles[newsIndex].description);
+                $('.card:nth-child(' + i + ') img').attr('src', rest.articles[newsIndex].urlToImage);
+                $('.card:nth-child(' + i + ') .news-author').html(rest.articles[newsIndex].author);
+                $('.card:nth-child(' + i + ') .news-source').html(rest.articles[newsIndex].source.name);
+            }
         }
     })
 })
